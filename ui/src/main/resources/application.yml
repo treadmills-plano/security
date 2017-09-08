@@ -1,0 +1,18 @@
+server:
+  port: 8091
+security:
+  user:
+    password: none
+  oauth2:
+    client:
+      accessTokenUri: http://localhost:8080/oauth/token
+      userAuthorizationUri: http://localhost:8080/oauth/authorize
+      clientId: trusted-app
+      clientSecret: secret
+    resource:
+      tokenInfoUri: http://localhost:8080/oauth/check_token
+zuul:
+  routes:
+    user:
+      path: /users
+      url: http://localhost:8090/users

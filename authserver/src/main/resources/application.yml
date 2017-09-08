@@ -1,0 +1,13 @@
+jdbc:
+    driverClassName: "com.mysql.jdbc.Driver"
+    url: "jdbc:mysql://localhost:3306/bluemix"
+    user: "root"
+    pass: "password"
+security:
+    basic:
+        enabled: false
+spring:
+    http:
+        multipart:
+            max-file-size: -1
+            max-request-size: -1
